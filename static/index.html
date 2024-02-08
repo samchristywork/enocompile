@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ENOCOMPILE - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/generated/style.css" />
+    <script src="/htmx.org@1.9.10"></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div
+        class="header"
+        hx-get="/components/header.html"
+        hx-trigger="load"
+      ></div>
+      <div class="content">
+        <div hx-get="/components/bubble.html" hx-trigger="load"></div>
+        <div
+          class="intro"
+          hx-get="/components/intro.html"
+          hx-trigger="load"
+        ></div>
+        <div
+          class="projects"
+          hx-get="/components/projects.html"
+          hx-trigger="load"
+        ></div>
+        <div
+          class="loves"
+          hx-get="/components/loves.html"
+          hx-trigger="load"
+        ></div>
+        <div
+          class="articles"
+          hx-get="/components/articles.html"
+          hx-trigger="load"
+        ></div>
+      </div>
+      <div
+        class="footer"
+        hx-get="/components/footer.html"
+        hx-trigger="load"
+      ></div>
+    </div>
+  </body>
+</html>
