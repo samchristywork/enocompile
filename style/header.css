@@ -1,0 +1,53 @@
+.header {
+  background-color: #0c5460;
+  color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.header > nav {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.header > nav > :nth-child(1) > a > :nth-child(1) {
+  font-weight: bold;
+}
+
+.header > nav > :nth-child(1) > a > :nth-child(1) > span {
+  color: #f27777;
+}
+
+.header > nav > span > * {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.header > nav > span > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header > nav > span > a:hover {
+  color: #f27777;
+  text-decoration: underline;
+}
+
+.header > nav > :last-child {
+  text-align: right;
+  width: 100%;
+}
+
+.header > nav > :last-child > :first-child {
+  color: #f27777;
+  font-weight: bold;
+}
+
+.header > nav > :last-child > :nth-child(2) {
+  color: #f27777;
+  font-weight: bold;
+}
+
+.header > nav > :last-child > :last-child {
+  color: #aaaaaa;
+}
