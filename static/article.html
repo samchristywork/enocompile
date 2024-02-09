@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ENOCOMPILE - Article</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="header">include{static/components/header.html}</div>
+      <div class="content">
+        <div>include{static/components/bubble.html}</div>
+        <div class="article">ARTICLE</div>
+      </div>
+      <div class="footer">include{static/components/footer.html}</div>
+    </div>
+  </body>
+  <script>
+    const length = document.querySelector("#length");
+    const contents = document.querySelector("#contents");
+    const articleBody = document.querySelector(".article-body");
+    const minutes = Math.ceil(articleBody.textContent.length / 1000);
+    length.textContent = `${minutes} minute read`;
+    const headings = articleBody.querySelectorAll("h1, h2, h3, h4, h5, h6");
+    let html = "<ul>";
+    for (let heading of headings) {
+      const id = heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      heading.id = id;
+      html += `<li><a href="#${id}">${heading.textContent}</a></li>`;
+    }
+    html += "</ul>";
+
+    contents.innerHTML = html;
+  </script>
+</html>
