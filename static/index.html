@@ -2,47 +2,23 @@
 <html>
   <head>
     <title>ENOCOMPILE - Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="/generated/style.css" />
-    <script src="/htmx.org@1.9.10"></script>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
 
   <body>
     <div class="app">
-      <div
-        class="header"
-        hx-get="/components/header.html"
-        hx-trigger="load"
-      ></div>
+      <div class="header">include{static/components/header.html}</div>
       <div class="content">
-        <div hx-get="/components/bubble.html" hx-trigger="load"></div>
-        <div
-          class="intro"
-          hx-get="/components/intro.html"
-          hx-trigger="load"
-        ></div>
-        <div
-          class="projects"
-          hx-get="/components/projects.html"
-          hx-trigger="load"
-        ></div>
-        <div
-          class="loves"
-          hx-get="/components/loves.html"
-          hx-trigger="load"
-        ></div>
-        <div
-          class="articles"
-          hx-get="/components/articles.html"
-          hx-trigger="load"
-        ></div>
+        <div>include{static/components/bubble.html}</div>
+        <div class="intro">include{static/components/intro.html}</div>
+        <div class="projects">include{static/components/projects.html}</div>
+        <div class="loves">include{static/components/loves.html}</div>
+        <div class="articles">include{static/components/articles.html}</div>
       </div>
-      <div
-        class="footer"
-        hx-get="/components/footer.html"
-        hx-trigger="load"
-      ></div>
+      <div class="footer">include{static/components/footer.html}</div>
     </div>
   </body>
 </html>
