@@ -1,8 +1,9 @@
 .header {
-  background-color: #0c5460;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--text-on-primary-color);
   padding: 20px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  user-select: none;
 }
 
 .header > nav {
@@ -15,7 +16,7 @@
 }
 
 .header > nav > :nth-child(1) > a > :nth-child(1) > span {
-  color: #f27777;
+  color: var(--accent-color);
 }
 
 .header > nav > span > * {
@@ -24,12 +25,12 @@
 }
 
 .header > nav > span > a {
-  color: #ffffff;
+  color: var(--text-on-primary-color);
   text-decoration: none;
 }
 
 .header > nav > span > a:hover {
-  color: #f27777;
+  color: var(--accent-color);
   text-decoration: underline;
 }
 
@@ -39,15 +40,29 @@
 }
 
 .header > nav > :last-child > :first-child {
-  color: #f27777;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
 .header > nav > :last-child > :nth-child(2) {
-  color: #f27777;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
 .header > nav > :last-child > :last-child {
-  color: #aaaaaa;
+  color: var(--text-on-primary-color);
+  opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+  .header > nav > :last-child {
+    display: none;
+  }
+  .header > nav a {
+    display: block;
+    text-align: center;
+  }
+  .header > nav > span :nth-child(2) {
+    display: none;
+  }
 }

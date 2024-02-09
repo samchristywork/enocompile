@@ -1,0 +1,33 @@
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-on-primary-color);
+  padding: 20px;
+  box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  user-select: none;
+}
+
+.footer .social > svg {
+  width: 2rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  color: var(--text-on-primary-color);
+}
+
+.footer .social > svg:hover {
+  filter: invert(0.5);
+  cursor: pointer;
+}
+
+.footer > span > a:hover {
+  text-decoration: none;
+}
+
+.footer > span:nth-child(1) {
+  text-align: left;
+}
+
+.footer > span:nth-child(2) {
+  text-align: right;
+}
