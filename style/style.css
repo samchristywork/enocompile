@@ -1,0 +1,80 @@
+:root {
+  --accent-color: #f27777;
+  --accent-color-hover: #ff9999;
+  --text-on-accent-color: #ffffff;
+
+  --primary-color: #0c5460;
+  --text-on-primary-color: #ffffff;
+
+  --secondary-color: #0c5460;
+
+  --body-color: #f5f5f5;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --subtle-color: #777777;
+}
+/*
+*/
+
+.hide {
+  display: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-color);
+  color: var(--text-color);
+
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f27777' fill-opacity='0.05'%3E%3Cpath d='M0 0h50v50H0zm50 50h50v50H50z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 10px 10px;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: var(--text-on-accent-color);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1:before {
+  content: "{ ";
+  color: var(--accent-color);
+}
+
+h1:after {
+  content: " }";
+  color: var(--accent-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: var(--background-color);
+  margin: 3rem auto;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  max-width: 800px;
+}
