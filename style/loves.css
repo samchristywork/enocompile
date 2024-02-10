@@ -1,0 +1,31 @@
+.loves {
+  padding-bottom: 1rem;
+}
+
+.loves > span {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  margin-top: 1rem;
+}
+
+.loves > span > span > span:after {
+  content: " ♥";
+  color: var(--accent-color);
+}
+
+.loves > span > span > span:last-child:after {
+  content: "";
+}
+
+.loves > span > span:first-child {
+  font-weight: bold;
+  color: var(--subtle-color);
+  text-align: right;
+  padding-right: 0.25rem;
+}
+
+.loves > span > span:last-child {
+  border-left: 0.5rem solid var(--body-color);
+
+  padding-left: 0.25rem;
+}

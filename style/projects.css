@@ -1,0 +1,11 @@
+.projects {
+  padding-bottom: 1rem;
+}
+
+.projects ul {
+  margin-bottom: 0;
+}
+
+.projects div li {
+  list-style-type: disclosure-closed;
+}
